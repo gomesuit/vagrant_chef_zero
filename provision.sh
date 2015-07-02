@@ -13,8 +13,8 @@ chmod 600 id_rsa
 # install chef
 curl -L https://www.chef.io/chef/install.sh | bash
 
-echo 'export PATH=/opt/chef/embedded/bin:$PATH' >> /root/.bash_profile
-export PATH=/opt/chef/embedded/bin:$PATH
+#echo 'export PATH=/opt/chef/embedded/bin:$PATH' >> /root/.bash_profile
+#export PATH=/opt/chef/embedded/bin:$PATH
 
 # install chef-solo
 #/opt/chef/embedded/bin/gem install knife-solo --no-ri --no-rdoc
@@ -28,9 +28,9 @@ git clone https://github.com/gomesuit/provisioner_chef_zero.git
 #knife solo cook root@localhost
 
 cd /home/vagrant/provisioner_chef_zero
-bundle install
+#bundle install
 #bundle exec knife zero bootstrap localhost
-bundle exec berks vendor cookbooks
+#bundle exec berks vendor cookbooks
 #bundle exec knife node run_list add ansible zsh
 #bundle exec knife zero chef_client 'name:ansible' --attribute ipaddress
 bundle exec chef-client -z
