@@ -29,7 +29,8 @@ git clone https://github.com/gomesuit/provisioner_chef_zero.git
 
 cd /home/vagrant/provisioner_chef_zero
 bundle install
-bundle exec knife zero bootstrap localhost
+#bundle exec knife zero bootstrap localhost
 bundle exec berks vendor cookbooks
-bundle exec knife node run_list add ansible zsh
-bundle exec knife zero chef_client 'name:ansible' --attribute ipaddress
+#bundle exec knife node run_list add ansible zsh
+#bundle exec knife zero chef_client 'name:ansible' --attribute ipaddress
+bundle exec chef-client -z
